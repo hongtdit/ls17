@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="zoom.css">
+</head>
+<body>
+    <figure class="zoom" style="background: imge/84543487_p0_master1200.jpg" onmousemove="zoom(event)">
+        <img src="/imge/84543487_p0_master1200.jpg">
+    </figure>
+    <script>
+        function zoom(event){
+  var zoomer = event.currentTarget;
+  x = event.offsetX/zoomer.offsetWidth*100;
+  y = event.offsetY/zoomer.offsetHeight*100;
+  zoomer.style.backgroundPosition = x + '% ' + y + '%';
+}
+    </script>
+</body>
+</html>
